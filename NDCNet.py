@@ -25,13 +25,12 @@ class ConvDilationBlock(nn.Module):
         # 根据扩张率调整填充保持输出尺寸不变
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size, stride=1,
                               padding=(kernel_size - 1) * dilation // 2, dilation=dilation)
-        # 批量归一化层
         self.bn = nn.BatchNorm2d(out_channels)
 
     def forward(self, x):
-        x = self.conv(x)  # 应用卷积
-        x = self.bn(x)  # 应用批量归一化
-        x = F.relu(x)  # 应用ReLU激活函数
+        x = self.conv(x) 
+        x = self.bn(x)  
+        x = F.relu(x)
         return x
 
 
@@ -64,7 +63,6 @@ class NDCNet(nn.Module):
         # 最后一层卷积整合所有特征，并还原成单通道输出
         self.conv6 = nn.Conv2d(15, 1, 3, padding=1)
 
-        # 残差注意力模块
         self.res_att1 = ChannelAttention(6)
         self.res_att2 = ChannelAttention(6)
         self.res_att3 = ChannelAttention(6)
