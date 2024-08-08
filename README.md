@@ -12,7 +12,7 @@ Single Image Dehazing Based on NDC-Net Optimized Dark Channel Prior
 1. Clone this repo:
 
 ```
-git clone https://github.com/NTMa-IMU/NDCNet.git
+https://github.com/NT-Ma/NDC-Net.git
 ```
 
 ### Training
