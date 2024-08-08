@@ -34,6 +34,3 @@ python test.py
 ```
 python dehaze.py
 ```
-
-## Contact
-If you have any questions or suggestions about our paper and repo, please feel free to concat us via <32209178@mail.imu.edu.cn>.
