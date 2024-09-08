@@ -2,7 +2,7 @@
 <div align="center"> 
 
 <h2> 
-Single Image Dehazing Based on NDC-Net Optimized Dark Channel Prior 
+Single Image Dehazing Based on Normalized Dark Channel Network 
 </h2>
 </div>
 
